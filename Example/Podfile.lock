@@ -1,28 +1,99 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.33.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.33.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.33.0):
+    - FBSDKCoreKit (~> 4.33.0)
+  - MAESCrypt (1.0.0)
   - Masonry (1.0.2)
-  - MLoadingViewKit (1.1.2)
-  - MLocalizedStringKit (1.0.0)
-  - MShareKit (1.0.0):
-    - Masonry (~> 1.0.2)
-    - MLoadingViewKit (~> 1.1.2)
+  - MExtensions (2.0.5):
+    - MAESCrypt (~> 1.0.0)
     - MLocalizedStringKit (~> 1.0.0)
     - MUIFont (~> 1.0.0)
     - SDWebImage
+  - MFileManager (1.0.3):
+    - MExtensions (~> 2.0.5)
+    - MFStoreHelperKit (~> 1.0.3)
+    - SDWebImage
+  - MFStoreHelperKit (1.0.3):
+    - SFHFKeychainUtils (~> 1.0.0)
+  - MLoadingViewKit (1.1.2)
+  - MLocalizedStringKit (1.0.0)
+  - MPopUpAlertManager (1.0.0)
+  - MShareKit (1.0.1):
+    - FBSDKCoreKit (~> 4.33.0)
+    - FBSDKLoginKit (~> 4.33.0)
+    - FBSDKShareKit (~> 4.33.0)
+    - Masonry (~> 1.0.2)
+    - MExtensions (~> 2.0.5)
+    - MFileManager (~> 1.0.3)
+    - MLoadingViewKit (~> 1.1.2)
+    - MLocalizedStringKit (~> 1.0.0)
+    - MPopUpAlertManager (~> 1.0.0)
+    - MUIFont (~> 1.0.0)
+    - PinterestSDK (~> 1.0.2)
+    - SDWebImage
+    - TwitterKit (~> 3.4.0)
   - MUIFont (1.0.0)
+  - PinterestSDK (1.0.2):
+    - AFNetworking (~> 3.0)
+    - SSKeychain
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
+  - SFHFKeychainUtils (1.0.0)
+  - SSKeychain (1.4.1)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - MShareKit (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Masonry
+    - MFStoreHelperKit
+    - PinterestSDK
     - SDWebImage
+    - SFHFKeychainUtils
+    - SSKeychain
+    - TwitterCore
+    - TwitterKit
   https://github.com/mafeng-Bryant/Specs:
+    - MAESCrypt
+    - MExtensions
+    - MFileManager
     - MLoadingViewKit
     - MLocalizedStringKit
+    - MPopUpAlertManager
     - MUIFont
 
 EXTERNAL SOURCES:
@@ -30,13 +101,28 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
+  MAESCrypt: baf33916e9cd34febc561d0f1b6c639d719175e2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MExtensions: 222a94b1eb52dbdaecc61a754daa3e9f631a003f
+  MFileManager: 8045c57842cf396d56969d75e5da9030c9b6f92d
+  MFStoreHelperKit: d32da4e4197c97bae77df140c4ef9b0dcb70f6c5
   MLoadingViewKit: ca72879331491db6b4152239df2fddb234842225
   MLocalizedStringKit: 6a7a076c228d94347ab9f37794e028e62591028c
-  MShareKit: 58260dd01140492abd151adf7e239d455592ab9d
+  MPopUpAlertManager: 3f8829b3d68d32ab7c758db0aee41a48cb409510
+  MShareKit: 68af81a81f18b355ae9193a04ccc411c7c57d790
   MUIFont: 52cc9d5e4e147dfb10adcb4421363a2b17454fd4
+  PinterestSDK: 6c6d92cc749e6520d1b6f1e75410c6fd1d05844c
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SFHFKeychainUtils: a4e064aedb7a5ada3d5219152d45f53cebc16507
+  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: e3754a2fb7c8a2427ba921bee6e76c6848029c9b
+PODFILE CHECKSUM: 3d098529c1db5da65cc3196073197668dec33a31
 
 COCOAPODS: 1.5.3

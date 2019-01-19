@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MShareKit'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'MShareKit.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -32,4 +32,7 @@ TODO: Add long description of the pod here.
   s.dependency 'FBSDKLoginKit', '~> 4.33.0'
   s.dependency 'PinterestSDK', '~> 1.0.2'
   s.dependency 'TwitterKit', '~> 3.4.0'
+  s.dependency 'MPopUpAlertManager', '~> 1.0.0'
+  s.dependency 'MExtensions', '~> 2.0.5'
+  s.dependency 'MFileManager', '~> 1.0.3'
 end

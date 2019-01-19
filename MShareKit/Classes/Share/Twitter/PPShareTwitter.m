@@ -8,8 +8,11 @@
 
 #import "PPShareTwitter.h"
 #import <Social/Social.h>
+#import "PPHUDView.h"
+#import "PPLocalizedString.h"
+#import <SDWebImage/SDWebImageDownloader.h>
+#import <TwitterKit/TWTRTwitter.h>
 #import <TwitterKit/TWTRComposer.h>
-#import <TwitterKit/TWTRComposerViewController.h>
 
 @implementation PPShareTwitter
 

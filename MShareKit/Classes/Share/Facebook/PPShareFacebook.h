@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
 typedef enum {
     PPShareFacebookResultOK,

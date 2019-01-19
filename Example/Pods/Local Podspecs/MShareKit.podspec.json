@@ -1,6 +1,6 @@
 {
   "name": "MShareKit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "MShareKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/mafeng-Bryant/MShareKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/mafeng-Bryant/MShareKit.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -49,6 +49,15 @@
     ],
     "TwitterKit": [
       "~> 3.4.0"
+    ],
+    "MPopUpAlertManager": [
+      "~> 1.0.0"
+    ],
+    "MExtensions": [
+      "~> 2.0.5"
+    ],
+    "MFileManager": [
+      "~> 1.0.3"
     ]
   }
 }

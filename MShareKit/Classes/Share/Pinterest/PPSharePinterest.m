@@ -9,7 +9,10 @@
 #import "PPSharePinterest.h"
 #import "PDKPin.h"
 #import "PDKCategories.h"
-#import <PDKClient.h>
+#import "PDKClient.h"
+#import "PPHUDView.h"
+#import <SDWebImage/SDWebImageDownloader.h>
+#import "NSString+Url.h"
 
 //notification name
 static NSString * const kShareToPinterestNotification   = @"ShareToPinterestNotification";
@@ -22,7 +25,14 @@ static NSString * const kShareToPinterestNotification   = @"ShareToPinterestNoti
 
 @implementation PPSharePinterest
 
-SINGLETON_GCD(PPSharePinterest);
++ (PPSharePinterest *)sharedPPSharePinterest {
+    static id sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
 
 - (void)handleOpenURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication

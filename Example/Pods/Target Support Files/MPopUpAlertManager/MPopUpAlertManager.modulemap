@@ -1,0 +1,6 @@
+framework module MPopUpAlertManager {
+  umbrella header "MPopUpAlertManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

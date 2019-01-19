@@ -9,6 +9,9 @@
 #import "PPShareFacebook.h"
 #import <Social/Social.h>
 #import "PPActivityShareManager.h"
+#import "UIAlertController+Alert.h"
+#import "PPLocalizedString.h"
+#import "MBProgressHUD.h"
 
 @implementation PPShareFacebook
 
@@ -20,7 +23,6 @@
     });
     return sharedInstance;
 }
-    
     
 - (void)shareToFacebookImageLink:(NSString *)title
                      description:(NSString *)description

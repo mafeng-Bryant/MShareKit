@@ -1,0 +1,6 @@
+framework module MFileManager {
+  umbrella header "MFileManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

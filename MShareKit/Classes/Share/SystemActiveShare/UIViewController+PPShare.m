@@ -9,6 +9,11 @@
 #import "UIViewController+PPShare.h"
 #import "PPActivityShareManager.h"
 #import <objc/runtime.h>
+#import "PPUIFont.h"
+#import "Masonry.h"
+#import "PPLocalizationManager.h"
+#import "VMacros.h"
+#import "UIView+Extensions.h"
 
 #define MViewRadius(View, Radius)\
 \
@@ -68,7 +73,7 @@ static char kCallBlockKey;
     [shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(bgView.mas_bottomMargin).offset(-20);
         make.centerX.mas_equalTo(bgView);
-        make.width.mas_equalTo(0.8* [UIScreen mainScreen].bounds.size.width);
+        make.width.mas_equalTo(0.8* kScreenWidth);
         make.height.mas_equalTo(44);
     }];
     
@@ -79,7 +84,7 @@ static char kCallBlockKey;
     lb.textAlignment = NSTextAlignmentCenter;
     lb.numberOfLines = 0;
     lb.text = PPLocalizationString(@"Saved to camera roll\nWant to share it with your friends?", nil);
-    CGFloat padding = (1 - scale) / 2.0 *  [UIScreen mainScreen].bounds.size.width;
+    CGFloat padding = (1 - scale) / 2.0 *  kScreenWidth;
     [lb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(shareButton.mas_top).offset(-10);
         make.leading.mas_equalTo(bgView).offset(padding);
@@ -107,7 +112,7 @@ static char kCallBlockKey;
         [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
     [UIView animateWithDuration:0.2 animations:^{
-        self.shareView.y =  [UIScreen mainScreen].bounds.size.height;
+        self.shareView.y = kScreenHeight;
     } completion:^(BOOL finished) {
         if (finished) {
             [self.shareView removeFromSuperview];

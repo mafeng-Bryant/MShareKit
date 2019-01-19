@@ -9,6 +9,10 @@
 #import "PPShareEmailAndSMS.h"
 #import <MessageUI/MessageUI.h>
 #import "PPActivityShareManager.h"
+#import "PPLocalizedString.h"
+#import "PPHUDView.h"
+#import "UIAlertController+Alert.h"
+#import "PPMoreLocalizedString.h"
 
 @implementation PPShareEmailAndSMS
 

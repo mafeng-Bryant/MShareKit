@@ -7,6 +7,13 @@
 //
 
 #import "PPShareInstagram.h"
+#import "PPHUDView.h"
+#import "NSString+Extensions.h"
+#import "PPFileHelper.h"
+#import <SDWebImage/SDWebImageDownloader.h>
+#import "PPLocalizedString.h"
+#import "NSString+ImageSize.h"
+#import "UIAlertController+Alert.h"
 
 @interface PPShareInstagram()<UIDocumentInteractionControllerDelegate>
 @end
@@ -29,7 +36,7 @@
     PPHUDView* hudView = [PPHUDView showTo:controller.view];
     NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
     if([[UIApplication sharedApplication] canOpenURL:instagramURL]){
-        NSString *imageName = isValidString(imageurl)?[imageurl toMD5]:@"instagram_tmp";
+        NSString *imageName = imageurl.length>0?[imageurl toMD5]:@"instagram_tmp";
         NSString *fullPath = [PPFileHelper instagramPath:imageName];
         NSURL *hookURL = [NSURL fileURLWithPath:fullPath];
         if (!image) {
@@ -72,7 +79,7 @@
     PPHUDView* hudView = [PPHUDView showTo:controller.view];
     NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
     if([[UIApplication sharedApplication] canOpenURL:instagramURL]){
-        NSString *imageName = isValidString(imageurl)?[imageurl toMD5]:@"instagram_tmp";
+        NSString *imageName = imageurl.length>0?[imageurl toMD5]:@"instagram_tmp";
         NSString *fullPath = [PPFileHelper instagramPath:imageName];
         NSURL *hookURL = [NSURL fileURLWithPath:fullPath];
         if (!orginImage) {
