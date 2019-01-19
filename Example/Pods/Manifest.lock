@@ -1,0 +1,42 @@
+PODS:
+  - Masonry (1.0.2)
+  - MLoadingViewKit (1.1.2)
+  - MLocalizedStringKit (1.0.0)
+  - MShareKit (1.0.0):
+    - Masonry (~> 1.0.2)
+    - MLoadingViewKit (~> 1.1.2)
+    - MLocalizedStringKit (~> 1.0.0)
+    - MUIFont (~> 1.0.0)
+    - SDWebImage
+  - MUIFont (1.0.0)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+
+DEPENDENCIES:
+  - MShareKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - SDWebImage
+  https://github.com/mafeng-Bryant/Specs:
+    - MLoadingViewKit
+    - MLocalizedStringKit
+    - MUIFont
+
+EXTERNAL SOURCES:
+  MShareKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MLoadingViewKit: ca72879331491db6b4152239df2fddb234842225
+  MLocalizedStringKit: 6a7a076c228d94347ab9f37794e028e62591028c
+  MShareKit: 58260dd01140492abd151adf7e239d455592ab9d
+  MUIFont: 52cc9d5e4e147dfb10adcb4421363a2b17454fd4
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+
+PODFILE CHECKSUM: e3754a2fb7c8a2427ba921bee6e76c6848029c9b
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module MShareKit {
+  umbrella header "MShareKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

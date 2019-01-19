@@ -1,0 +1,6 @@
+framework module Pods_MShareKit_Tests {
+  umbrella header "Pods-MShareKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

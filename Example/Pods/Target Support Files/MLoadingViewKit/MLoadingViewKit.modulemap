@@ -1,0 +1,6 @@
+framework module MLoadingViewKit {
+  umbrella header "MLoadingViewKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
